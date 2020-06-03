@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'view/categoryView.dart';
-
+import 'view/categoryMeal.dart';
+import 'util/appRoutes.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -25,7 +26,10 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.w400),
             ),
       ),
-      home: CategoryView.categoryView(),
+      routes: {
+        AppRoutes.HOME: (ctx) => CategoryView(),
+        AppRoutes.CATEGORY_MEAL: (ctx) => CategoryMeal(),
+      },
     );
   }
 }

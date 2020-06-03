@@ -3,7 +3,7 @@ import 'package:meals/component/categoryItem.dart';
 import 'package:meals/data/dummyData.dart';
 
 class CategoryView extends StatelessWidget {
-  const CategoryView.categoryView({Key key}) : super(key: key);
+  const CategoryView();
 
   @override
   Widget build(BuildContext context) {
