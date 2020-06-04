@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:meals/view/mealDetail.dart';
 import 'view/categoryView.dart';
 import 'view/categoryMeal.dart';
 import 'util/appRoutes.dart';
+import 'view/tabs.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -27,8 +29,9 @@ class MyApp extends StatelessWidget {
             ),
       ),
       routes: {
-        AppRoutes.HOME: (ctx) => CategoryView(),
+        AppRoutes.HOME: (ctx) => Tabs(),
         AppRoutes.CATEGORY_MEAL: (ctx) => CategoryMeal(),
+        AppRoutes.MEAL_DETAIL: (ctx) => MealDetail(),
       },
     );
   }

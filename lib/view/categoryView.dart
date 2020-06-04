@@ -7,26 +7,17 @@ class CategoryView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Let\'s cook',
-          style: Theme.of(context).textTheme.headline5,
-        ),
-        centerTitle: true,
+    return GridView(
+      padding: EdgeInsets.all(15),
+      gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+        maxCrossAxisExtent: 200,
+        childAspectRatio: 3 / 2,
+        crossAxisSpacing: 15,
+        mainAxisSpacing: 15,
       ),
-      body: GridView(
-        padding: EdgeInsets.all(15),
-        gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-          maxCrossAxisExtent: 200,
-          childAspectRatio: 3 / 2,
-          crossAxisSpacing: 15,
-          mainAxisSpacing: 15,
-        ),
-        children: DUMMY_CATEGORIES.map((category) {
-          return CategoryItem(category);
-        }).toList(),
-      ),
+      children: DUMMY_CATEGORIES.map((category) {
+        return CategoryItem(category);
+      }).toList(),
     );
   }
 }

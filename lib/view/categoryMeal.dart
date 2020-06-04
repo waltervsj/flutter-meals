@@ -21,12 +21,13 @@ class CategoryMeal extends StatelessWidget {
         centerTitle: true,
       ),
       body: ListView.builder(
-          itemCount: categoryMeals.length,
-          itemBuilder: (context, index) {
-            return MealItem(
-              categoryMeals[index],
-            );
-          }),
+        itemCount: categoryMeals.length,
+        itemBuilder: (context, index) {
+          return MealItem(
+            categoryMeals[index],
+          );
+        },
+      ),
     );
   }
 }
